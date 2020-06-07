@@ -1,0 +1,14 @@
+C:\Users\yahir\source\repos\Logging\Logging\bin\Debug\Logging.exe.config
+C:\Users\yahir\source\repos\Logging\Logging\bin\Debug\Logging.exe
+C:\Users\yahir\source\repos\Logging\Logging\bin\Debug\Logging.pdb
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\Logging.csprojAssemblyReference.cache
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\MainWindow.g.cs
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\App.g.cs
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\Logging_MarkupCompile.cache
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\Logging_MarkupCompile.lref
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\MainWindow.baml
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\Logging.g.resources
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\Logging.Properties.Resources.resources
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\Logging.csproj.GenerateResource.cache
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\Logging.exe
+C:\Users\yahir\source\repos\Logging\Logging\obj\Debug\Logging.pdb

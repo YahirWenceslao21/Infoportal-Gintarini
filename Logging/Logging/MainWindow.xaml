@@ -1,0 +1,204 @@
+﻿<Window x:Class="Logging.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Logging"
+        mc:Ignorable="d"
+        Title="Gintarini" Height="650" Width="1200" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="White_Walpaper.jpg"/>
+    </Window.Background>
+    <Grid Background="#FF4E9AF8" Margin="2,0,-4,0" Height="45" VerticalAlignment="Top">
+        <Button x:Name="btn_Minimizar" Content="_" HorizontalAlignment="Left" Height="45" Margin="1035,1,0,-1" VerticalAlignment="Top" Width="45" Background="{x:Null}" Foreground="WhiteSmoke" FontSize="18" BorderBrush="{x:Null}" Click="btn_Minimizar_Click_1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}" CornerRadius="6">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#B9B9B9" TargetName="Border" />
+                                        <Setter Property="Opacity" Value="0.8" TargetName="Border"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_Minimizar" Content="O" HorizontalAlignment="Left" Height="45" Margin="1085,1,0,-1" VerticalAlignment="Top" Width="45" Background="{x:Null}" Foreground="#FFF0E2E2" FontSize="16" BorderBrush="{x:Null}" Click="Btn_Minimizar_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}" CornerRadius="6">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#B9B9B9" TargetName="Border" />
+                                        <Setter Property="Opacity" Value="0.8" TargetName="Border"/>
+
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Grid HorizontalAlignment="Left" Height="80" Margin="10,37,-5,-72" VerticalAlignment="Top" Width="1190">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1046*"/>
+                <ColumnDefinition Width="81*"/>
+                <ColumnDefinition Width="64*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Center" Height="34" Margin="287,45,244.5,0" TextWrapping="Wrap" Text="Proyecto de conversion de archivos para maquin Holzman" VerticalAlignment="Top" Width="514" FontSize="22" FontFamily="Times New Roman" />
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="444" Margin="0,117,0,-529" VerticalAlignment="Top" Width="550">
+            <Rectangle HorizontalAlignment="Left" Height="441" VerticalAlignment="Top" Width="540" Margin="0,3,0,0"/>
+            <TextBlock HorizontalAlignment="Center" Height="63" Margin="135.5,10,136.5,0" TextWrapping="Wrap" Text="Cargar archivos" VerticalAlignment="Top" Width="278" FontSize="36" Foreground="#FF0063FF" FontWeight="Bold"/>
+            <Button x:Name="Btn_BuscarArchivo" Content="Buscar Archivo" HorizontalAlignment="Left" Height="74" Margin="96,87,0,0" VerticalAlignment="Top" Width="318" Background="#FF4E9AF8" BorderBrush="{x:Null}" Foreground="White" FontSize="24" Click="Btn_BuscarArchivo_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="LightBlue" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}" CornerRadius="20">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#0f355b" TargetName="Border" />
+
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Path Data="M54.666667,297.66667" HorizontalAlignment="Left" Height="4" Margin="54.667,297.667,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="4" Fill="Black" StrokeThickness="4"/>
+            <Rectangle HorizontalAlignment="Left" Height="30" Margin="43,212,0,0" VerticalAlignment="Top" Width="30">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Icono_Carpeta.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock x:Name="Ruta_Destino" HorizontalAlignment="Left" Height="30" Margin="92,215,0,0" TextWrapping="Wrap" Text="Ruta del destino/.../..." Width="444" FontSize="14" VerticalAlignment="Top"/>
+            <Rectangle HorizontalAlignment="Left" Height="3" Margin="39,250,0,0" VerticalAlignment="Top" Width="483" Fill="#FF0063FF"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="449" Margin="555,112,0,-529" VerticalAlignment="Top" Width="635">
+            <Rectangle HorizontalAlignment="Left" Height="30" Margin="38,220,0,0" VerticalAlignment="Top" Width="30">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Icono_Carpeta.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Button x:Name="Btn_SeleccionarDestino" Content="Seleccionar destino" HorizontalAlignment="Left" Height="74" Margin="96,92,0,0" VerticalAlignment="Top" Width="318" Background="#FF4E9AF8" BorderBrush="{x:Null}" Foreground="White" FontSize="24" Click="Btn_SeleccionarDestino_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="LightBlue" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}" CornerRadius="20">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#0f355b" TargetName="Border" />
+
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <TextBlock HorizontalAlignment="Center" Height="63" Margin="135.5,10,221.5,0" TextWrapping="Wrap" Text="Buscar Destino" VerticalAlignment="Top" Width="278" FontSize="36" Foreground="#FF0063FF" FontWeight="Bold"/>
+            <TextBlock x:Name="Exportar_destino" HorizontalAlignment="Left" Height="30" Margin="89,223,0,0" TextWrapping="Wrap" Text="Ruta del destino/.../..." Width="445" FontSize="14" VerticalAlignment="Top"/>
+            <Rectangle HorizontalAlignment="Left" Height="3" Margin="38,253,0,0" VerticalAlignment="Top" Width="539" Fill="#FF0063FF"/>
+            <TextBlock HorizontalAlignment="Left" Height="30" Margin="89,283,0,0" TextWrapping="Wrap" Text="NombreArchivo.pxt" Width="445" FontSize="14" VerticalAlignment="Top"/>
+            <Rectangle HorizontalAlignment="Left" Height="3" Margin="38,313,0,0" VerticalAlignment="Top" Width="539" Fill="#FF0063FF"/>
+            <Rectangle HorizontalAlignment="Left" Height="30" Margin="38,278,0,0" VerticalAlignment="Top" Width="30">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Icono_NombreArchivo.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Button x:Name="btn_Prueba" Width="280" Height="60" Margin="109,368,246,21" Background="#FF4E9AF8" BorderBrush="{x:Null}" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#269201" TargetName="Border" />
+                                            <Setter Property="Foreground" Value="White" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="img_guardar" Source="Icono_Guardar.png" Margin="-49,5,0,5" Grid.Column="0" HorizontalAlignment="Left" Width="40"/>
+                    <StackPanel Grid.Column="1" Margin="12">
+                        <TextBlock x:Name="txt_guardar" Text="Guardar" FontWeight="Bold" FontSize="24" Height="36" Margin="14,0,3,0" />
+
+                    </StackPanel>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="83" Margin="0,561,0,-612" VerticalAlignment="Top" Width="1190">
+            <Rectangle HorizontalAlignment="Left" Height="83" Stroke="Black" VerticalAlignment="Top" Width="1190" Fill="Black"/>
+            <TextBlock HorizontalAlignment="Left" Height="28.5" Margin="34,26,0,0" TextWrapping="Wrap" Text="GINTARINI" VerticalAlignment="Top" Width="205.5" Foreground="White" FontFamily="Times New Roman" FontSize="28"/>
+            <Rectangle Fill="#FFF7EFEF" HorizontalAlignment="Left" Height="70" Margin="210.5,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="4"/>
+        </Grid>
+        <Button x:Name="Btn_Cerrar" Content="X" HorizontalAlignment="Left" Margin="1135,2,0,-1" VerticalAlignment="Top" Width="43" Height="44" Background="{x:Null}" Foreground="#FFFFFEFE" Click="Btn_Cerrar_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}" CornerRadius="6">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="red" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+
+    </Grid>
+</Window>
